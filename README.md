@@ -1,5 +1,5 @@
 # twprp_whitelistjobchanger
- Made by Roids#9757 for The Wack Pack RP - RedM Project
+ Made by Roids#9757 for The Wack Pack RP RedM Server
 
 
 
