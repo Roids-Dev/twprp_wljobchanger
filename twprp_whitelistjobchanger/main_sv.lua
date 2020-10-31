@@ -22,11 +22,11 @@ AddEventHandler('wlcheck', function(jobT, jobS)
         local _source = source
         local user = VORP.getCharacter(_source)
         local _id = user.identifier
-        if not checkCopWhitelist(_id, jobT) then
+        if not checkCopWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then
         --print('whitelistnotworking')
         TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..jobS, 5000)
     end
-        if checkCopWhitelist(_id, jobT) then
+        if checkCopWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then
         --print('whitelistworks')
         local _source = source
         VORP.setJob(_source, jobS)
@@ -49,4 +49,12 @@ end)
 -- /OFFDUTY --
 -------------------------------------------------
 ---Why are you still reading this? Go home lol---
+-------------------------------------------------
+--- Adding this now but it wont work just yet ---
+-------------------------------------------------
+--local function CheckDiscordWhitelistByGuild(src, role, guild)
+--    return exports.discord_perms:IsRolePresentByGuild(src, role, guild)
+--end
+-------------------------------------------------
+--- Maybe one day this will work, but not yet ---
 -------------------------------------------------
