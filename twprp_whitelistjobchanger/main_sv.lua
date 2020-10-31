@@ -13,7 +13,6 @@ local function checkWhitelist(id, job)
     return false
 end
 -- /Functions --
-
 -------------------------------------------------
 ---- Don't touch this part either ight?  lol ----
 -------------------------------------------------
@@ -34,14 +33,12 @@ AddEventHandler('wlcheck', function(job1, job2)
         TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..job2, 5000)
         print(job2.." job set to source")
     end
-
 end)
 -- /Whitelist Check --
 -------------------------------------------------
 ---- You know what it's probably best you just dont touch anything in this file lol ----
 -------------------------------------------------
 -- OFFDUTY --
-
 RegisterServerEvent('offduty')
 AddEventHandler('offduty', function()
      local _source = source
@@ -49,6 +46,5 @@ AddEventHandler('offduty', function()
     TriggerClientEvent("vorp:Tip", _source, "You are now unemployed", 5000)
     print("Job removed from source")
 end)
-
 -- /OFFDUTY --
 -------------------------------------------------
