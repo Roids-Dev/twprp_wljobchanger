@@ -1,3 +1,9 @@
+---- Whitelist Job Changer made by Roids-Dev ----
+
+----- I update this frequently so check back often for the latest updates -----
+
+----- https://github.com/Roids-Dev/twprp_whitelistjobchanger -----
+-------------------------------------------------
 VORP = exports.vorp_core:vorpAPI()
 -------------------------------------------------
 ---- Don't touch this or you'll break it lol ----

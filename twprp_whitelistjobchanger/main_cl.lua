@@ -1,4 +1,8 @@
--- Whitelist Job Changer made by Roids#9759 for TWPRP - The RedM Project - Credit to Plouffe(plouffe_jobset) for the server side code--
+---- Whitelist Job Changer made by Roids-Dev ----
+
+----- I update this frequently so check back often for the latest updates -----
+
+----- https://github.com/Roids-Dev/twprp_whitelistjobchanger -----
 
 -------------------------------------------------
 
