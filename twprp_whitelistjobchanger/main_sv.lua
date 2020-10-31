@@ -23,15 +23,15 @@ AddEventHandler('wlcheck', function(jobT, jobS)
         local user = VORP.getCharacter(_source)
         local _id = user.identifier
         if not checkCopWhitelist(_id, jobT) then
-        print('whitelistnotworking')
+        --print('whitelistnotworking')
         TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..jobS, 5000)
     end
         if checkCopWhitelist(_id, jobT) then
-        print('whitelistworks')
+        --print('whitelistworks')
         local _source = source
         VORP.setJob(_source, jobS)
         TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..jobS, 5000)
-        print(jobS.." job set to source")
+        --print(jobS.." job set to source")
     end
 end)
 -- /Whitelist Check --
@@ -44,7 +44,7 @@ AddEventHandler('offduty', function()
      local _source = source
     VORP.setJob(_source, "none")
     TriggerClientEvent("vorp:Tip", _source, "You are now unemployed", 5000)
-    print("Job removed from source")
+    --print("Job removed from source")
 end)
 -- /OFFDUTY --
 -------------------------------------------------
