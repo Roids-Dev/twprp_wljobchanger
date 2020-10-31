@@ -19,3 +19,8 @@ Creating a NEW whitelisted job:
 - In the `main_sv.lua` you will need to add a new function and event for the new job
 - Make sure you make any changes needed to the events and functions to match the new job
 - Lastly just have the person use the command you created in `main_cl.lua`
+
+
+To Do:
+- Add Discord role integration(waiting on RedM to pull discord ids lel)
+- Streamline the server side to only use one function and event for all jobs(probably won't happen until discord role integration because im lazy like that lol)
