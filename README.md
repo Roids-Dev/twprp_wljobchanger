@@ -11,7 +11,7 @@ As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - c
  TEMPLATES FOR THE `config.lua` and `main_cl.lua` CAN BE FOUND INSIDE THEIR FILE
 
 - Add a new table with whatever you want the job to be called inside the `config.lua`
-- Inside the table you can add the persons steamid64 in hex. This person is now whitelisted
+- Inside the table you can add the persons steamid64 in hex **MUST BE ALL LOWERCASE**. This person is now whitelisted
 - In the `main_cl.lua` add a new `RegisterCommand` for the job you created in the config
 - Lastly just have the person use the command you created in `main_cl.lua`
 
