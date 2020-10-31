@@ -1,6 +1,7 @@
 VORP = exports.vorp_core:vorpAPI()
-
-
+-------------------------------------------------
+---- Don't touch this or you'll break it lol ----
+-------------------------------------------------
 -- Functions --
 local function checkWhitelist(id, job)
     local _job = job
@@ -13,13 +14,9 @@ local function checkWhitelist(id, job)
 end
 -- /Functions --
 
-
-
-
-
-
-
-
+-------------------------------------------------
+---- Don't touch this part either ight?  lol ----
+-------------------------------------------------
 -- Whitelist Check --
 RegisterServerEvent('wlcheck')
 AddEventHandler('wlcheck', function(job1, job2)
@@ -39,10 +36,10 @@ AddEventHandler('wlcheck', function(job1, job2)
     end
 
 end)
-
 -- /Whitelist Check --
-
-
+-------------------------------------------------
+---- You know what it's probably best you just dont touch anything in this file lol ----
+-------------------------------------------------
 -- OFFDUTY --
 
 RegisterServerEvent('offduty')
@@ -54,5 +51,4 @@ AddEventHandler('offduty', function()
 end)
 
 -- /OFFDUTY --
-
-
+-------------------------------------------------

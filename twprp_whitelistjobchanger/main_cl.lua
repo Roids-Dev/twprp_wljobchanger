@@ -1,6 +1,6 @@
 -- Whitelist Job Changer made by Roids#9759 for TWPRP - The RedM Project - Credit to Plouffe(plouffe_jobset) for the server side code--
 
-
+-------------------------------------------------
 
 -- EXAMPLE JOB --
 
@@ -12,7 +12,7 @@
 
 -- /EXAMPLE JOB --
 
-
+-------------------------------------------------
 
 -- COPDUTY --
 
@@ -24,7 +24,7 @@ end)
 
 -- /COPDUTY --
 
-
+-------------------------------------------------
 
 -- DOCDUTY --
 
@@ -36,7 +36,7 @@ end)
 
 -- /DOCDUTY --
 
-
+-------------------------------------------------
 
 -- OFFDUTY --
 
@@ -46,4 +46,4 @@ end)
 
 -- /OFFDUTY --
 
-
+-------------------------------------------------
