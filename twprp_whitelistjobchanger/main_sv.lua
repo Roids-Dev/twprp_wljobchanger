@@ -18,20 +18,20 @@ end
 -------------------------------------------------
 -- Whitelist Check --
 RegisterServerEvent('wlcheck')
-AddEventHandler('wlcheck', function(job1, job2)
+AddEventHandler('wlcheck', function(jobT, jobS)
         local _source = source
         local user = VORP.getCharacter(_source)
         local _id = user.identifier
-        if not checkCopWhitelist(_id, job1) then
+        if not checkCopWhitelist(_id, jobT) then
         print('whitelistnotworking')
-        TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..job2, 5000)
+        TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..jobS, 5000)
     end
-        if checkCopWhitelist(_id, job1) then
+        if checkCopWhitelist(_id, jobT) then
         print('whitelistworks')
         local _source = source
-        VORP.setJob(_source, job2)
-        TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..job2, 5000)
-        print(job2.." job set to source")
+        VORP.setJob(_source, jobS)
+        TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..jobS, 5000)
+        print(jobS.." job set to source")
     end
 end)
 -- /Whitelist Check --
