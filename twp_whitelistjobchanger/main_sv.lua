@@ -48,6 +48,7 @@ AddEventHandler('copdutycheck', function()
 local _source = source
 local user = VORP.getCharacter(_source)
 local _id = user.identifier
+local police = 'police'
 if not checkCopWhitelist(_id, police) then
     print('whitelistnotworking')
 end
