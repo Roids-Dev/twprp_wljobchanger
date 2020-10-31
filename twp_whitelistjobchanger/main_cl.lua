@@ -5,7 +5,9 @@
 -- COPDUTY --
 
 RegisterCommand('lawman', function()
-	TriggerServerEvent('copdutycheck')
+    local job1 = police
+    local job2 = 'police'
+	TriggerServerEvent('wlcheck', job1, job2)
 end)
 
 -- /COPDUTY --
@@ -15,7 +17,9 @@ end)
 -- DOCDUTY --
 
 RegisterCommand('docduty', function()
-    TriggerServerEvent('docdutycheck')
+    local job1 = doctor
+    local job2 = 'doctor'
+    TriggerServerEvent('wlcheck', job1, job2)
 end)
 
 -- /DOCDUTY --
