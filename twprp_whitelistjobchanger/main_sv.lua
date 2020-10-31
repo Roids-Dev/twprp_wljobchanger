@@ -42,6 +42,21 @@ AddEventHandler('wlcheck', function(jobT, jobS)
 end)
 -- /Whitelist Check --
 -------------------------------------------------
+-- SETJOB --
+RegisterServerEvent('twp:setjob')
+AddEventHandler('twp:setjob', function(player, job)
+    local _source = source
+    local user = VORP.getCharacter(_source)
+    local _player = player
+    local _job = job
+    if user.group == "admin" then
+        VORP.setJob(_player, _job)
+        TriggerClientEvent("vorp:TipBottom", _player, 'Your job has been set to '.._job, 10000)
+        TriggerClientEvent("vorp:TipBottom", _source, 'Users job has been set to '.._job, 10000)
+    end
+end)
+-- /SETJOB --
+-------------------------------------------------
 --- You know what Just dont touch anything lol---
 -------------------------------------------------
 -- OFFDUTY --
