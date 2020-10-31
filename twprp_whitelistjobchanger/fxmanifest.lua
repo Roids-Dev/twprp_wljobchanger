@@ -11,6 +11,5 @@ client_script {
 
 server_scripts {
     'main_sv.lua',
-    '@mysql-async/lib/MySQL.lua',
     'config.lua'
 }
