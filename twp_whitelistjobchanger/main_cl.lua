@@ -2,6 +2,18 @@
 
 
 
+-- EXAMPLE JOB --
+
+--RegisterCommand('EXAMPLE', function()
+--    local job1 = EXAMPLE
+--    local job2 = 'EXAMPLE'
+--    TriggerServerEvent('wlcheck', job1, job2)
+--end)
+
+-- /EXAMPLE JOB --
+
+
+
 -- COPDUTY --
 
 RegisterCommand('lawman', function()
