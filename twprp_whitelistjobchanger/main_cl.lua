@@ -28,7 +28,7 @@ end)
 
 -- DOCDUTY --
 
-RegisterCommand('docduty', function()
+RegisterCommand('doctor', function()
     local job1 = doctor
     local job2 = 'doctor'
     TriggerServerEvent('wlcheck', job1, job2)
