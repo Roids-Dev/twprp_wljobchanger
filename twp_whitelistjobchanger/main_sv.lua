@@ -30,7 +30,7 @@ end
 
 -- Copduty --
 RegisterServerEvent('copdutycheck')
-AddEventHandler('copdutycheck', function(kekw)
+AddEventHandler('copdutycheck', function()
 local _source = source
 local user = VORP.getCharacter(_source)
 local _id = user.identifier
@@ -51,7 +51,7 @@ end)
 
 -- Docduty --
 RegisterServerEvent('docdutycheck')
-AddEventHandler('docdutycheck', function(kekw)
+AddEventHandler('docdutycheck', function()
 local _source = source
 local user = VORP.getCharacter(_source)
 local _id = user.identifier
