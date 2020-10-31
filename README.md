@@ -7,7 +7,7 @@ Congrats you found this! I'm not going to be posting this anywhere( so please re
 
 Fair warning: The odds of me breaking this repo are VERY high lol So please keep that in mind. If there are any issues at the time of you downloading it please either dm me on discord or open up an issue here lol
 
-There are only 3 commands as is. `/lawman - changes job to police`, `/doctor - changes job to doctor`, `/offduty - changes job to VORP default job(none)`
+As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - changes job to doctor`, `/offduty - changes job to VORP default job(none)`
 
 Adding it to your server:
 - Add twp_whitelistjobchanger to your resources folder
