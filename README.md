@@ -3,7 +3,7 @@
 
 
 
-Congrats you found this! I'm not going to be posting this anywhere( so please return the favor by keeping it to yourself also :) ) but since you found it, here you go lol! 
+Congrats you found this! I'm not going to be posting this anywhere( so please return the favor by keeping it to yourself also 😊 ) but since you found it, here you go lol! 
 
 In the event I do release it here's how to use it
 
