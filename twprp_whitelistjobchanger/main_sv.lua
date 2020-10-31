@@ -48,3 +48,5 @@ AddEventHandler('offduty', function()
 end)
 -- /OFFDUTY --
 -------------------------------------------------
+---Why are you still reading this? Go home lol---
+-------------------------------------------------
