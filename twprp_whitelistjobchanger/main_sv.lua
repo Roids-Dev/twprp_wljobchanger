@@ -36,7 +36,7 @@ AddEventHandler('wlcheck', function(job1, job2)
 end)
 -- /Whitelist Check --
 -------------------------------------------------
----- You know what it's probably best you just dont touch anything in this file lol ----
+--- You know what Just dont touch anything lol---
 -------------------------------------------------
 -- OFFDUTY --
 RegisterServerEvent('offduty')
