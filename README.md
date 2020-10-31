@@ -13,8 +13,8 @@ Adding it to your server:
 - Add `ensure twp_whitelistjobchanger` to your `server.cfg`
 
 Creating a NEW whitelisted job:
-- Add a new array with whatever you want the job to be called inside the `config.lua`
-- Inside the array you can add the persons steamid64 in hex. This person is now whitelisted
+- Add a new table with whatever you want the job to be called inside the `config.lua`
+- Inside the table you can add the persons steamid64 in hex. This person is now whitelisted
 - In the `main_cl.lua` add a new `RegisterCommand` for the job you created in the config
 - Lastly just have the person use the command you created in `main_cl.lua`
 
