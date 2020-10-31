@@ -23,4 +23,4 @@ As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - c
 - Streamline the server side to only use one function and event for all jobs(would you look at that didnt need discord after all lmao)
 
 # Notes
-- The discord role integration is currently built into the script but it will not work until RedM supports discord like FiveM does. However if/when this does happen it will require the `discord_perms` resource to be running on your server. When the day comes just simply remove the comments on the discord related lines and change where it says `ROLE` and `GUILD` to match your `discord_perms` Config and everything should work fine!
+- The discord role integration is currently built into the script but it will not work until RedM supports discord like FiveM does. However if/when this does happen it will require the `discord_perms` resource to be running on your server as well as the discord bot. When the day comes just simply remove the comments on the discord related lines and change where it says `ROLE` and `GUILD` to match your `discord_perms` Config and everything should work fine!
