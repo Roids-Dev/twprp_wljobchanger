@@ -4,8 +4,8 @@
 As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - changes job to doctor`, `/offduty - changes job to VORP default job(none)`
 
 Adding it to your server:
-- Add twp_whitelistjobchanger to your resources folder
-- Add `ensure twp_whitelistjobchanger` to your `server.cfg`
+- Add twprp_whitelistjobchanger to your resources folder
+- Add `ensure twprp_whitelistjobchanger` to your `server.cfg`
 
 Creating a NEW whitelisted job:
 - Add a new table with whatever you want the job to be called inside the `config.lua`
