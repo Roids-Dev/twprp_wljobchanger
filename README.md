@@ -19,5 +19,5 @@ As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - c
 # To Do
 - Add Discord role integration(waiting on RedM to pull discord ids lel)
 
-# Done (from to do)
+# Done (from `To Do`)
 - Streamline the server side to only use one function and event for all jobs(would you look at that didnt need discord after all lmao)
