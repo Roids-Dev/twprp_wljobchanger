@@ -61,10 +61,9 @@ RegisterCommand("setjob", function(source, args)
     local job = args[2]
         if player ~= nil and job ~= nil then
             local user = VORP.getCharacter(_source)
-            local _player = VORP.getCharacter(player)
              if user.group == "admin" then
-                VORP.setJob(_player, job)
-                TriggerClientEvent("vorp:TipBottom", _player, 'Your job has been set to '..job, 10000)
+                VORP.setJob(player, job)
+                TriggerClientEvent("vorp:TipBottom", player, 'Your job has been set to '..job, 10000)
                 TriggerClientEvent("vorp:TipBottom", _source, 'Users job has been set to '..job, 10000)
             else
                 TriggerClientEvent("vorp:Tip", _source, "Missing arguments. Please use /jobset ID JOB", 10000)
