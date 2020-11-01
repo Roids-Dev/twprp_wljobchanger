@@ -1,4 +1,4 @@
-# twprp_whitelistjobchanger
+# twprp_wljobchanger
  Made by Roids#9757 for The Wack Pack RP
 
 As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - changes job to doctor`, `/offduty - changes job to VORP default job(none)`
