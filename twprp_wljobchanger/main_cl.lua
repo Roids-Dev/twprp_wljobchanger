@@ -27,16 +27,3 @@ RegisterCommand('offduty', function()
 end)
 -- /OFFDUTY --
 -------------------------------------------------
--- SETJOB --
-RegisterCommand("jobset", function(source, args)
-	local _source = source
-	local player = args[1]
-	local job = args[2]
-		if player ~= nil and job ~= nil then
-    		TriggerServerEvent("twp:setjob", player, job)
-		else
-			TriggerEvent("vorp:Tip", "Missing arguments. Please use /jobset ID JOB", 10000)
-	end
-end)
--- /SETJOB --
--------------------------------------------------
