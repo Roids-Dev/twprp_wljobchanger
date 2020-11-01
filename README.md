@@ -8,7 +8,7 @@ As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - c
 - Add `ensure twprp_wljobchanger` to your `server.cfg`
 
 # Use
- TEMPLATES FOR THE `config.lua` and `main_cl.lua` CAN BE FOUND [HERE](https://github.com/Roids-Dev/twprp_wljobchanger/wiki) AS WELL AS INSIDE THEIR FILE
+ TEMPLATES FOR THE `config.lua` and `main_cl.lua` CAN BE FOUND [HERE](https://github.com/Roids-Dev/twprp_wljobchanger/wiki)
 
 - Add a new table with whatever you want the job to be called inside the `config.lua`
 - Inside the table you can add the persons steamid64 in hex **MUST BE ALL LOWERCASE**. This person is now whitelisted
