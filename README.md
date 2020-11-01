@@ -4,8 +4,8 @@
 As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - changes job to doctor`, `/offduty - changes job to VORP default job(none)`
 
 # Installation
-- Add twprp_whitelistjobchanger to your resources folder
-- Add `ensure twprp_whitelistjobchanger` to your `server.cfg`
+- Add `twprp_wljobchanger` to your resources folder
+- Add `ensure twprp_wljobchanger` to your `server.cfg`
 
 # Use
  TEMPLATES FOR THE `config.lua` and `main_cl.lua` CAN BE FOUND INSIDE THEIR FILE
