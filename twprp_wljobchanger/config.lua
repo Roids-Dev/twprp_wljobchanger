@@ -1,15 +1,5 @@
 Config = {}	
 
------ EXAMPLE TABLE-----
---EXAMPLE =
---{
---	"steam:id64hex",--"example 1"
---	"steam:id64hex",--"example 2"	
---}
------/EXAMPLE TABLE-----
-
-
-
 ---------------------------------
 police =
 {
