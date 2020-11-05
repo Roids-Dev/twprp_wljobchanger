@@ -23,6 +23,6 @@ As is there are only 3 commands. `/lawman - changes job to police`, `/doctor - c
 - Streamline the server side to only use one function and event for all jobs(would you look at that didnt need discord after all lmao)
 
 # Notes
-- The discord role integration is currently built into the script but it will not work until RedM supports discord like FiveM does. However if/when this does happen it will require the `discord_perms` resource to be running on your server as well as the discord bot. When the day comes just simply remove the comments on the discord related lines and change where it says `ROLE` and `GUILD` to match your `discord_perms` Config and everything should work fine!
+- The discord role integration is currently built into the script but it will not work until RedM MILESTONE 4. However if/when this does happen it will require the `discord_perms` resource to be running on your server as well as the discord bot. When the day comes I will update this repo with everything needed to use discord whitelisting for job as well as a full tutorial on how to setup the bot and configure the jobs.
 
 - The current release (`2.1.0-alpha`) has a `/jobset` command built into it but the feature has not been tested hence the alpha tag on the release so please keep in mind while the feature is there it might not work.
