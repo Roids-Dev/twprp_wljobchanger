@@ -2,7 +2,7 @@
 
 ----- I update this frequently so check back often for the latest updates -----
 
------ https://github.com/Roids-Dev/twprp_whitelistjobchanger -----
+----- https://github.com/Roids-Dev/twprp_wljobchanger -----
 -------------------------------------------------
 VORP = exports.vorp_core:vorpAPI()
 -------------------------------------------------
@@ -28,33 +28,19 @@ AddEventHandler('wlcheck', function(jobT, jobS)
         local _source = source
         local user = VORP.getCharacter(_source)
         local _id = user.identifier
-        if not checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this lol
-        --print('whitelistnotworking')
+        if not checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this comment lol
         TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..jobS, 5000)
     end
-        if checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this lol
-        --print('whitelistworks')
+        if checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this comment lol
         local _source = source
         VORP.setJob(_source, jobS)
         TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..jobS, 5000)
-        --print(jobS.." job set to source")
+        print(jobS.." job set to source")
     end
 end)
 -- /Whitelist Check --
 -------------------------------------------------
 -- SETJOB --
-RegisterServerEvent('twp:setjob')
-AddEventHandler('twp:setjob', function(player, job)
-    local _source = source
-    local user = VORP.getCharacter(_source)
-    local _player = player
-    local _job = job
-    if user.group == "admin" then
-        VORP.setJob(_player, _job)
-        TriggerClientEvent("vorp:TipBottom", _player, 'Your job has been set to '.._job, 10000)
-        TriggerClientEvent("vorp:TipBottom", _source, 'Users job has been set to '.._job, 10000)
-    end
-end)
 RegisterCommand("setjob", function(source, args)
     local _source = source
     local player = args[1]
@@ -65,6 +51,8 @@ RegisterCommand("setjob", function(source, args)
                 VORP.setJob(player, job)
                 TriggerClientEvent("vorp:TipBottom", player, 'Your job has been set to '..job, 10000)
                 TriggerClientEvent("vorp:TipBottom", _source, 'Users job has been set to '..job, 10000)
+            elseif user.group ~= "admin" then
+                TriggerClientEvent("vorp:Tip", _source, "You do not have permission to use this command!", 10000)
             else
                 TriggerClientEvent("vorp:Tip", _source, "Missing arguments. Please use /jobset ID JOB", 10000)
         end
@@ -80,7 +68,7 @@ AddEventHandler('offduty', function()
      local _source = source
     VORP.setJob(_source, "none")
     TriggerClientEvent("vorp:Tip", _source, "You are now unemployed", 5000)
-    --print("Job removed from source")
+    print("Job removed from source ".._source)
 end)
 -- /OFFDUTY --
 -------------------------------------------------
