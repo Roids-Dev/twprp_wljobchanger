@@ -48,8 +48,7 @@ RegisterCommand("setjob", function(source, args)
     local job = args[2]
         if player ~= nil and job ~= nil then
             local User = VorpCore.getUser(source)
-            local User2 = VorpCore.getUser(player)
-            local Character = User2.getUsedCharacter
+            local Character = VorpCore.getUser(player).getUsedCharacter
              if User.getGroup == "admin" then
                 Character.setJob(job)
                 TriggerClientEvent("vorp:TipBottom", player, 'Your job has been set to '..job, 10000)
