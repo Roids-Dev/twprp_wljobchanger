@@ -26,14 +26,15 @@ end
 RegisterServerEvent('wlcheck')
 AddEventHandler('wlcheck', function(jobT, jobS)
         local _source = source
-        local user = VORP.getCharacter(_source)
-        local _id = user.identifier
+        local User = VorpCore.getUser(_source)
+        local Character = User.getUsedCharacter
+        local _id = Character.identifier
         if not checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this comment lol
         TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..jobS, 5000)
     end
         if checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this comment lol
         local _source = source
-        VORP.setJob(_source, jobS)
+        Character.setJob(jobS)
         TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..jobS, 5000)
         print(jobS.." job set to source")
     end
@@ -46,12 +47,14 @@ RegisterCommand("setjob", function(source, args)
     local player = args[1]
     local job = args[2]
         if player ~= nil and job ~= nil then
-            local user = VORP.getCharacter(_source)
-             if user.group == "admin" then
-                VORP.setJob(player, job)
+            local User = VorpCore.getUser(source)
+            local User2 = VorpCore.getUser(player)
+            local Character = User2.getUsedCharacter
+             if User.getGroup == "admin" then
+                Character.setJob(job)
                 TriggerClientEvent("vorp:TipBottom", player, 'Your job has been set to '..job, 10000)
                 TriggerClientEvent("vorp:TipBottom", _source, 'Users job has been set to '..job, 10000)
-            elseif user.group ~= "admin" then
+            elseif User.getGroup ~= "admin" then
                 TriggerClientEvent("vorp:Tip", _source, "You do not have permission to use this command!", 10000)
             else
                 TriggerClientEvent("vorp:Tip", _source, "Missing arguments. Please use /jobset ID JOB", 10000)
@@ -66,7 +69,9 @@ end)
 RegisterServerEvent('offduty')
 AddEventHandler('offduty', function()
      local _source = source
-    VORP.setJob(_source, "none")
+     local User = VorpCore.getUser(source)
+     local Character = User.getUsedCharacter
+    Character.setJob('none')
     TriggerClientEvent("vorp:Tip", _source, "You are now unemployed", 5000)
     print("Job removed from source ".._source)
 end)
