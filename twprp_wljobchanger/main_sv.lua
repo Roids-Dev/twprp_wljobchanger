@@ -4,7 +4,11 @@
 
 ----- https://github.com/Roids-Dev/twprp_wljobchanger -----
 -------------------------------------------------
-VORP = exports.vorp_core:vorpAPI()
+local VorpCore = {}
+
+TriggerEvent("getCore",function(core)
+    VorpCore = core
+end)
 -------------------------------------------------
 ---- Don't touch this or you'll break it lol ----
 -------------------------------------------------
