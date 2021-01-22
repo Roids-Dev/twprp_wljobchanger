@@ -1,8 +1,11 @@
+-------------------------------------------------
 ---- Whitelist Job Changer made by Roids-Dev ----
 
 ----- I update this frequently so check back often for the latest updates -----
 
 ----- https://github.com/Roids-Dev/twprp_wljobchanger -----
+-------------------------------------------------
+-- VORP STUFF --
 -------------------------------------------------
 local VorpCore = {}
 
@@ -10,9 +13,14 @@ TriggerEvent("getCore",function(core)
     VorpCore = core
 end)
 -------------------------------------------------
+-- /VORP STUFF
+-------------------------------------------------
+-------------------------------------------------
 ---- Don't touch this or you'll break it lol ----
 -------------------------------------------------
+-------------------------------------------------
 -- Functions --
+-------------------------------------------------
 local function checkWhitelist(id, job)
     local _job = job
     for key, value in pairs(_job) do
@@ -22,11 +30,15 @@ local function checkWhitelist(id, job)
     end 
     return false
 end
+-------------------------------------------------
 -- /Functions --
+-------------------------------------------------
 -------------------------------------------------
 ---- Don't touch this part either ight?  lol ----
 -------------------------------------------------
+-------------------------------------------------
 -- Whitelist Check --
+-------------------------------------------------
 RegisterServerEvent('wlcheck')
 AddEventHandler('wlcheck', function(jobT, jobS)
         local _source = source
@@ -43,6 +55,7 @@ AddEventHandler('wlcheck', function(jobT, jobS)
         print(jobS.." job set to source")
     end
 end)
+-------------------------------------------------
 -- /Whitelist Check --
 -------------------------------------------------
 -- SETJOB --
@@ -64,21 +77,28 @@ RegisterCommand("setjob", function(source, args)
         end
     end
 end)
+-------------------------------------------------
 -- /SETJOB --
+-------------------------------------------------
 -------------------------------------------------
 --- You know what Just dont touch anything lol---
 -------------------------------------------------
+-------------------------------------------------
 -- OFFDUTY --
-RegisterServerEvent('offduty')
-AddEventHandler('offduty', function()
+-------------------------------------------------
+RegisterServerEvent('jobchange')
+AddEventHandler('jobchange', function(job)
      local _source = source
+     local _job = job
      local User = VorpCore.getUser(source)
      local Character = User.getUsedCharacter
-    Character.setJob('none')
-    TriggerClientEvent("vorp:Tip", _source, "You are now unemployed", 5000)
-    print("Job removed from source ".._source)
+    Character.setJob(_job)
+    TriggerClientEvent("vorp:Tip", _source, "Your job has changed!", 5000)
+    print("Job changed for source ".._source)
 end)
+-------------------------------------------------
 -- /OFFDUTY --
+-------------------------------------------------
 -------------------------------------------------
 ---Why are you still reading this? Go home lol---
 -------------------------------------------------
