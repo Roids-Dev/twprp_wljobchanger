@@ -8,10 +8,9 @@
 -- VORP STUFF --
 -------------------------------------------------
 local VorpCore = {}
-
-TriggerEvent("getCore",function(core)
-    VorpCore = core
-end)
+TriggerEvent("getCore", function(core)
+        VorpCore = core
+    end)
 -------------------------------------------------
 -- /VORP STUFF
 -------------------------------------------------
@@ -27,7 +26,7 @@ local function checkWhitelist(id, job)
         if id == value then
             return true
         end
-    end 
+    end
     return false
 end
 -------------------------------------------------
@@ -39,44 +38,44 @@ end
 -------------------------------------------------
 -- Whitelist Check --
 -------------------------------------------------
-RegisterServerEvent('wlcheck')
-AddEventHandler('wlcheck', function(jobT, jobS)
+RegisterServerEvent("wlcheck")
+AddEventHandler("wlcheck", function(jobT, jobS)
         local _source = source
         local User = VorpCore.getUser(_source)
         local Character = User.getUsedCharacter
         local _id = Character.identifier
         if not checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this comment lol
-        TriggerClientEvent("vorp:Tip", _source, "You don't have access to "..jobS, 5000)
-    end
+            TriggerClientEvent("vorp:Tip", _source, "You don't have access to " .. jobS, 5000)
+        end
         if checkWhitelist(_id, jobT) then --or CheckDiscordWhitelistByGuild(_source, 'ROLE', 'GUILD') then <-- Don't touch this comment lol
-        local _source = source
-        Character.setJob(jobS)
-        TriggerClientEvent("vorp:Tip", _source, "Job Changed To "..jobS, 5000)
-        print(jobS.." job set to source")
-    end
-end)
+            local _source = source
+            Character.setJob(jobS)
+            TriggerClientEvent("vorp:Tip", _source, "Job Changed To " .. jobS, 5000)
+            print(jobS .. " job set to source")
+        end
+    end)
 -------------------------------------------------
 -- /Whitelist Check --
 -------------------------------------------------
 -- SETJOB --
 RegisterCommand("setjob", function(source, args)
-    local _source = source
-    local player = args[1]
-    local job = args[2]
+        local _source = source
+        local player = args[1]
+        local job = args[2]
         if player ~= nil and job ~= nil then
             local User = VorpCore.getUser(source)
             local Character = VorpCore.getUser(player).getUsedCharacter
-             if User.getGroup == "admin" then
+            if User.getGroup == "admin" then
                 Character.setJob(job)
-                TriggerClientEvent("vorp:TipBottom", player, 'Your job has been set to '..job, 10000)
-                TriggerClientEvent("vorp:TipBottom", _source, 'Users job has been set to '..job, 10000)
+                TriggerClientEvent("vorp:TipBottom", player, "Your job has been set to " .. job, 10000)
+                TriggerClientEvent("vorp:TipBottom", _source, "Users job has been set to " .. job, 10000)
             elseif User.getGroup ~= "admin" then
                 TriggerClientEvent("vorp:Tip", _source, "You do not have permission to use this command!", 10000)
             else
                 TriggerClientEvent("vorp:Tip", _source, "Missing arguments. Please use /jobset ID JOB", 10000)
+            end
         end
-    end
-end)
+    end)
 -------------------------------------------------
 -- /SETJOB --
 -------------------------------------------------
@@ -86,16 +85,16 @@ end)
 -------------------------------------------------
 -- OFFDUTY --
 -------------------------------------------------
-RegisterServerEvent('jobchange')
-AddEventHandler('jobchange', function(job)
-     local _source = source
-     local _job = job
-     local User = VorpCore.getUser(source)
-     local Character = User.getUsedCharacter
-    Character.setJob(_job)
-    TriggerClientEvent("vorp:Tip", _source, "Your job has changed!", 5000)
-    print("Job changed for source ".._source)
-end)
+RegisterServerEvent("jobchange")
+AddEventHandler("jobchange", function(job)
+        local _source = source
+        local _job = job
+        local User = VorpCore.getUser(source)
+        local Character = User.getUsedCharacter
+        Character.setJob(_job)
+        TriggerClientEvent("vorp:Tip", _source, "Your job has changed to " .. _job .. "!", 5000)
+        print("Job changed for source " .. _source)
+    end)
 -------------------------------------------------
 -- /OFFDUTY --
 -------------------------------------------------

@@ -7,53 +7,54 @@
 -------------------------------------------------
 -- COPDUTY --
 -------------------------------------------------
-RegisterCommand('lawman', function()
-    local job1 = police
-    local job2 = 'police'
-	TriggerServerEvent('wlcheck', job1, job2)
-end)
+RegisterCommand("lawman", function()
+        local job1 = police
+        local job2 = "police"
+        TriggerServerEvent("wlcheck", job1, job2)
+    end)
 -------------------------------------------------
 -- /COPDUTY --
 -------------------------------------------------
 -------------------------------------------------
 -- DOCDUTY --
 -------------------------------------------------
-RegisterCommand('doctor', function()
-    local job1 = doctor
-    local job2 = 'doctor'
-    TriggerServerEvent('wlcheck', job1, job2)
-end)
+RegisterCommand("doctor", function()
+        local job1 = doctor
+        local job2 = "doctor"
+        TriggerServerEvent("wlcheck", job1, job2)
+    end)
 -------------------------------------------------
 -- /DOCDUTY --
 -------------------------------------------------
 -------------------------------------------------
 -- OFFDUTY --
 -------------------------------------------------
-RegisterCommand('offduty', function()
-    TriggerServerEvent('offduty')
-end)
+RegisterCommand("offduty", function()
+        TriggerServerEvent("offduty")
+    end)
 -------------------------------------------------
 -- /OFFDUTY --
 -------------------------------------------------
 -------------------------------------------------
 -- OTHER JOBS --
 -------------------------------------------------
-AddEventHandler('chatMessage', function(source, name, message)
-    if string.find(message, "duty") then
-    local job, removed = string.gsub(message, 'duty', '')
-    if checkForJob(job) then
-        TriggerServerEvent('jobchange', job)
-    else
-        TriggerEvent("vorp:Tip", 'This job does not exist!', 5000)
-    end
-    end
-    CancelEvent()
-end)
+AddEventHandler("chatMessage", function(source, name, message)
+        if string.find(message, "duty") then
+            local job, removed = string.gsub(message, "duty", "")
+            if checkForJob(job) then
+                TriggerServerEvent("jobchange", job)
+            else
+                TriggerEvent("vorp:Tip", "This job does not exist!", 5000)
+            end
+        end
+        CancelEvent()
+    end)
+
 -------------------------------------------------
 -- /OTHER JOBS --
 -------------------------------------------------
 -------------------------------------------------
--- FUNCTIONS -- 
+-- FUNCTIONS --
 -------------------------------------------------
 local function checkForJob(job)
     local _job = job
@@ -61,9 +62,9 @@ local function checkForJob(job)
         if _job == value then
             return true
         end
-    end 
+    end
     return false
 end
 -------------------------------------------------
--- /FUNCTIONS -- 
+-- /FUNCTIONS --
 -------------------------------------------------
